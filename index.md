@@ -25,22 +25,4 @@ Hi, I'm **[Your Name]**, a PhD researcher specializing in **energy and environme
 You can reach me via:  
 📧 Email: [your email]  
 💼 [LinkedIn Profile](#)  
-📄 [Google Scholar](#)  
-
----
-
-## How to Deploy This Website
-1. **Fork & Clone** this repository on GitHub.
-2. **Edit `_config.yml`** to update personal details.
-3. **Commit & Push Changes** to publish updates.
-
-For a **custom domain**, update the `CNAME` file with your domain name.
-
----
-
-### **Additional Pages:**
-- **[Research](/research/)**
-- **[Publications](/publications/)**
-- **[Contact](/contact/)**
-
-This site is powered by **Jekyll & GitHub Pages**.
+📄 [Google Scholar](#)

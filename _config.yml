@@ -1,14 +1,17 @@
+# Jekyll Configuration
+
+# Website settings
 title: "My Research Website"
 description: "Doctoral Researcher in Energy & Environmental Economics"
-theme: minima  # Or another Jekyll theme
+theme: minima  # You can change this theme
 baseurl: ""
-url: "https://peerlasse.github.io"
-github_username: PeerLasse
+url: "https://your-username.github.io"
+github_username: your-username
 
+# Navigation menu
+collections:
+  pages:
+    output: true
 
-### **Additional Pages:**
-- **[Research](/research/)**
-- **[Publications](/publications/)**
-- **[Contact](/contact/)**
-
-This site is powered by **Jekyll & GitHub Pages**.
+# Permalinks
+permalink: /:title/
