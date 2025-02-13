@@ -394,3 +394,67 @@ section {
 .post-content .btn:hover {
   background: #138d75;
 }
+
+/* About Me Section Styling */
+#about {
+  padding: 40px 20px;
+  background: #fff;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#about h2 {
+  text-align: center;
+  color: #2C3E50;
+  margin-bottom: 30px;
+}
+
+/* Flex container for profile and bio */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Profile image styling */
+.profile {
+  flex: 0 0 150px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #16A085;
+}
+
+/* Bio styling */
+.bio {
+  flex: 1;
+}
+
+.bio p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.bio h3 {
+  margin-top: 25px;
+  color: #2C3E50;
+}
+
+.bio ul {
+  list-style: disc inside;
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+.bio ul li {
+  margin-bottom: 10px;
+}
