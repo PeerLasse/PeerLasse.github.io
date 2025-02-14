@@ -57,7 +57,7 @@ header p {
   font-weight: 300;
 }
 .photo-banner {
-  background-image: url('images/your-banner.jpg'); /* Replace with your banner image path */
+  background-image: url('header.jpg'); /* Replace with your banner image path */
   background-size: cover;
   background-position: center;
   width: 100%;
