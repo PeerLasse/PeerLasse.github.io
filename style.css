@@ -66,8 +66,11 @@ header p {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  margin: 0;      /* Ensure no margin is added */
+  padding: 0;     /* Ensure no padding is added */
+  overflow: hidden; /* Hide any overflow instead of auto */
 }
+
 
 .banner-overlay {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
