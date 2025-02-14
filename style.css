@@ -67,7 +67,7 @@ header p {
   align-items: center;
   justify-content: center;
   margin: 0;      /* Ensure no margin is added */
-  padding: 0;     /* Ensure no padding is added */
+  padding: 5px;     /* Ensure no padding is added */
   overflow: hidden; /* Hide any overflow instead of auto */
 }
 
@@ -94,7 +94,7 @@ header p {
    Navigation
    ========================================================================== */
 nav {
-  background: var(--accent-color);
+  background: var(--primary-color);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin-top: 0;
 }
