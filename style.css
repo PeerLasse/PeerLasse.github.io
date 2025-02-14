@@ -1,11 +1,27 @@
-/* CSS Reset */
+/* ==========================================================================
+   CSS Variables & Reset
+   ========================================================================== */
+:root {
+  /* Refined Color Palette */
+  --primary-color: #2C3E50;    /* Deep navy for headings & major elements */
+  --secondary-color: #34495E;  /* Muted navy for secondary elements */
+  --accent-color: #16A085;     /* Teal accent for buttons, links, etc. */
+  --background-color: #f0f4f8;  /* Light, inviting background */
+  --card-background: #ffffff;  /* Clean white for cards */
+  --text-color: #333333;       /* Dark gray for body text */
+  --muted-text: #777777;       /* Lighter gray for metadata and muted text */
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base styling */
+/* ==========================================================================
+   Base Styles & Layout
+   ========================================================================== */
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -13,8 +29,6 @@ body {
   line-height: 1.6;
 }
 
-
-/* Container styling */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -22,13 +36,15 @@ body {
   padding: 0 20px;
 }
 
-/* Header */
+/* ==========================================================================
+   Header
+   ========================================================================== */
 header {
-  background: linear-gradient(135deg, #2C3E50, #34495E);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: #fff;
   padding: 40px 0;
   text-align: center;
-  border-bottom: 3px solid #16A085;
+  border-bottom: 3px solid var(--accent-color);
 }
 
 header h1 {
@@ -41,9 +57,11 @@ header p {
   font-weight: 300;
 }
 
-/* Navigation */
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
 nav {
-  background: #16A085;
+  background: var(--accent-color);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -70,11 +88,13 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   background: #fff;
-  color: #16A085;
+  color: var(--accent-color);
   transform: translateY(-2px);
 }
 
-/* Main content */
+/* ==========================================================================
+   Main Content & Sections
+   ========================================================================== */
 main {
   background: #fff;
   padding: 40px 0;
@@ -89,20 +109,35 @@ main .container {
 
 section {
   margin-bottom: 40px;
+  /* Fade-in animation for sections */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.3s;
 }
 
 section h2 {
-  color: #2C3E50;
+  color: var(--primary-color);
   margin-bottom: 15px;
   font-size: 2em;
-  border-bottom: 2px solid #16A085;
+  border-bottom: 2px solid var(--accent-color);
   display: inline-block;
   padding-bottom: 5px;
 }
 
-/* Footer */
+/* Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 footer {
-  background: #2C3E50;
+  background: var(--primary-color);
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -111,7 +146,7 @@ footer {
 }
 
 footer a {
-  color: #16A085;
+  color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -120,59 +155,9 @@ footer a:hover {
   color: #fff;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-  
-  nav ul li {
-    margin: 10px 0;
-  }
-  
-  header h1 {
-    font-size: 2em;
-  }
-  
-  section h2 {
-    font-size: 1.8em;
-  }
-}
-
-.about-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Example: Smooth hover effect for buttons and links */
-.btn, nav ul li a {
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-/* Fade-in animation for sections on load */
-section {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* ==========================================================================
+   Call-to-Action Buttons & Utility Classes
+   ========================================================================== */
 .cta-container {
   text-align: center;
   margin: 20px 0;
@@ -180,7 +165,7 @@ section {
 
 .btn {
   display: inline-block;
-  background-color: #16A085;
+  background-color: var(--accent-color);
   color: #fff;
   padding: 12px 25px;
   border-radius: 4px;
@@ -193,6 +178,74 @@ section {
   background-color: #138d75;
   transform: translateY(-2px);
 }
+
+/* ==========================================================================
+   About Me Section
+   ========================================================================== */
+#about {
+  padding: 40px 20px;
+  background: #fff;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#about h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.profile {
+  flex: 0 0 150px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.bio {
+  flex: 1;
+}
+
+.bio p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.bio h3 {
+  margin-top: 25px;
+  color: var(--primary-color);
+}
+
+.bio ul {
+  list-style: disc inside;
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+.bio ul li {
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   Portfolio / Card Design
+   ========================================================================== */
 #portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -200,7 +253,7 @@ section {
 }
 
 .portfolio-item {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   overflow: hidden;
@@ -226,12 +279,30 @@ section {
   margin-bottom: 15px;
 }
 
+/* Generic Card */
+.card {
+  background: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   Blog Page Styling
+   ========================================================================== */
 #blog {
   margin: 40px 0;
 }
 
 .blog-post {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -245,42 +316,12 @@ section {
 .blog-post p {
   margin-bottom: 15px;
 }
-.social-media {
-  margin-top: 10px;
-}
 
-.social-media a {
-  margin: 0 10px;
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.social-media a:hover {
-  transform: scale(1.1);
-}
-
-.social-media img {
-  width: 24px;
-  height: 24px;
-}
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  #portfolio {
-    flex-direction: column;
-  }
-}
-
-/* --- Blog Page Styling --- */
-
-/* Featured Section */
+/* Featured Section in Blog */
 #featured {
   margin-bottom: 40px;
   padding: 20px;
-  background: #fff;
+  background: var(--card-background);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
@@ -301,13 +342,13 @@ section {
 }
 
 .featured-info h3 a {
-  color: #2C3E50;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 .featured-info .meta {
   font-size: 0.9em;
-  color: #777;
+  color: var(--muted-text);
   margin: 10px 0;
 }
 
@@ -328,7 +369,7 @@ section {
 #blog-list .search-bar button {
   padding: 10px 20px;
   margin-left: 10px;
-  background: #16A085;
+  background: var(--accent-color);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -348,7 +389,7 @@ section {
 }
 
 .post-card {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
@@ -368,13 +409,13 @@ section {
 }
 
 .post-content h3 a {
-  color: #2C3E50;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 .post-content .meta {
   font-size: 0.9em;
-  color: #777;
+  color: var(--muted-text);
   margin: 10px 0;
 }
 
@@ -385,7 +426,7 @@ section {
 .post-content .btn {
   align-self: flex-start;
   padding: 8px 16px;
-  background: #16A085;
+  background: var(--accent-color);
   color: #fff;
   border-radius: 4px;
   text-decoration: none;
@@ -396,90 +437,55 @@ section {
   background: #138d75;
 }
 
-/* About Me Section Styling */
-#about {
-  padding: 40px 20px;
-  background: #fff;
-  margin: 20px auto;
-  max-width: 900px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+/* ==========================================================================
+   Social Media Icons
+   ========================================================================== */
+.social-media {
+  margin-top: 10px;
 }
 
-#about h2 {
-  text-align: center;
-  color: #2C3E50;
-  margin-bottom: 30px;
+.social-media a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
-/* Flex container for profile and bio */
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 20px;
+.social-media a:hover {
+  transform: scale(1.1);
 }
 
-/* Profile image styling */
-.profile {
-  flex: 0 0 150px;
-  text-align: center;
+.social-media img {
+  width: 24px;
+  height: 24px;
 }
 
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #16A085;
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  
+  nav ul li {
+    margin: 10px 0;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  section h2 {
+    font-size: 1.8em;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #portfolio {
+    flex-direction: column;
+  }
 }
 
-/* Bio styling */
-.bio {
-  flex: 1;
-}
-
-.bio p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.bio h3 {
-  margin-top: 25px;
-  color: #2C3E50;
-}
-
-.bio ul {
-  list-style: disc inside;
-  margin-left: 20px;
-  line-height: 1.6;
-}
-
-.bio ul li {
-  margin-bottom: 10px;
-}
-
-:root {
-  /* Refined Color Palette */
-  --primary-color: #2C3E50;    /* Deep navy for headings & major elements */
-  --secondary-color: #34495E;  /* Muted navy for secondary elements */
-  --accent-color: #16A085;     /* Teal accent for buttons, links, etc. */
-  --background-color: #f0f4f8;  /* Light, inviting background */
-  --card-background: #ffffff;  /* Clean white for cards */
-  --text-color: #333333;       /* Dark gray for body text */
-  --muted-text: #777777;       /* Lighter gray for metadata and muted text */
-}
-.card {
-  background: var(--card-background);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
