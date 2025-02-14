@@ -92,6 +92,7 @@ header p {
 nav {
   background: var(--accent-color);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 0;
 }
 
 nav ul {
@@ -120,6 +121,7 @@ nav ul li a.active {
   color: var(--accent-color);
   transform: translateY(-2px);
 }
+
 
 /* ==========================================================================
    Main Content & Sections
