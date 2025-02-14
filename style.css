@@ -7,11 +7,12 @@
 
 /* Base styling */
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: 'Open Sans', sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
   line-height: 1.6;
 }
+
 
 /* Container styling */
 .container {
@@ -457,4 +458,28 @@ section {
 
 .bio ul li {
   margin-bottom: 10px;
+}
+
+:root {
+  /* Refined Color Palette */
+  --primary-color: #2C3E50;    /* Deep navy for headings & major elements */
+  --secondary-color: #34495E;  /* Muted navy for secondary elements */
+  --accent-color: #16A085;     /* Teal accent for buttons, links, etc. */
+  --background-color: #f0f4f8;  /* Light, inviting background */
+  --card-background: #ffffff;  /* Clean white for cards */
+  --text-color: #333333;       /* Dark gray for body text */
+  --muted-text: #777777;       /* Lighter gray for metadata and muted text */
+}
+.card {
+  background: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
