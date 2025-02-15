@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Posts - Energy Economics and Data Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Photo Banner -->
+  <section class="photo-banner">
+    <div class="banner-overlay">
+      <h1>Transforming Energy Policy with Advanced Data Analytics</h1>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="blogposts.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content: Scrollable Blog Feed -->
+  <main>
+    <div class="container">
+      <section id="blog-feed">
+        <h2>Latest Blog Posts</h2>
+        
+        <!-- Blog Post 1 -->
+        <article class="post-card">
+          <div class="post-content">
+            <h3><a href="blogbosts/EAERE.html">EAERE 2024</a></h3>
+            <p class="meta">Published on January 1, 2025 by Peer</p>
+            <p>Impressions of my first conference visit at EAERE 2024 in Leuven</p>
+            <a href="post1.html" class="btn">Read More</a>
+          </div>
+          <!-- Discussion Section for Post 1 -->
+          <div class="discussion-section" id="disqus_thread_post1">
+            <!-- Disqus embed for Post 1 -->
+            <script>
+              var disqus_config_post1 = function () {
+                this.page.url = window.location.href + "?post=post1";
+                this.page.identifier = "post1";
+              };
+              (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="post-card">
+          <div class="post-content">
+            <h3><a href="post2.html">Post Title 2</a></h3>
+            <p class="meta">Published on January 5, 2025 by Peer</p>
+            <p>This is a summary of the second blog post. It offers a quick glimpse into the topics and findings discussed.</p>
+            <a href="post2.html" class="btn">Read More</a>
+          </div>
+          <!-- Discussion Section for Post 2 -->
+          <div class="discussion-section" id="disqus_thread_post2">
+            <!-- Disqus embed for Post 2 -->
+            <script>
+              var disqus_config_post2 = function () {
+                this.page.url = window.location.href + "?post=post2";
+                this.page.identifier = "post2";
+              };
+              (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+          </div>
+        </article>
+
+        <!-- More blog post articles can be added similarly -->
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Contact: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/yourprofile" aria-label="LinkedIn">
+          <img src="icons/linkedin.svg" alt="LinkedIn Icon">
+        </a>
+        <a href="https://scholar.google.com/citations?user=yourID" aria-label="Google Scholar">
+          <img src="icons/google-scholar.svg" alt="Google Scholar Icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
