@@ -295,10 +295,11 @@ footer a:hover {
   flex: 1 1 calc(50% - 20px);
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* <<< THIS FIXES YOUR ISSUE */
 }
 
 .portfolio-img {
-    max-width: 150px;
+    max-width: 250px;
     width: 100%;
     height: auto;
 }
