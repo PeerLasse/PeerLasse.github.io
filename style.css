@@ -298,8 +298,9 @@ footer a:hover {
 }
 
 .portfolio-img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    max-width: 350px; /* hard upper limit */
+    height: auto;
 }
 
 .portfolio-info {
